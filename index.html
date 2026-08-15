@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>محلل الذهب XAUUSD</title>
+
+<style>
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0d1117;
+color:white;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin:10px 0 5px;
+}
+
+.subtitle{
+text-align:center;
+color:#8b949e;
+margin-bottom:20px;
+}
+
+.price-box{
+background:#161b22;
+border-radius:20px;
+padding:25px;
+text-align:center;
+border:1px solid #30363d;
+}
+
+.price{
+font-size:45px;
+font-weight:bold;
+margin:15px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:15px;
+}
+
+.card{
+background:#161b22;
+border:1px solid #30363d;
+border-radius:15px;
+padding:18px;
+}
+
+.label{
+color:#8b949e;
+font-size:14px;
+}
+
+.value{
+font-size:21px;
+font-weight:bold;
+margin-top:8px;
+}
+
+.signal{
+margin-top:15px;
+background:#161b22;
+border:1px solid #30363d;
+border-radius:20px;
+padding:25px;
+text-align:center;
+}
+
+.signal-value{
+font-size:35px;
+font-weight:bold;
+margin:10px;
+}
+
+.wait{
+color:#f0c674;
+}
+
+.buy{
+color:#3fb950;
+}
+
+.sell{
+color:#f85149;
+}
+
+button{
+width:100%;
+margin-top:15px;
+padding:16px;
+border:0;
+border-radius:14px;
+font-size:18px;
+font-weight:bold;
+background:#238636;
+color:white;
+}
+
+.status{
+text-align:center;
+color:#8b949e;
+margin-top:15px;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥇 محلل الذهب</h1>
+
+<div class="subtitle">
+XAUUSD — فريم 5 دقائق
+</div>
+
+<div class="price-box">
+
+<div>السعر الحالي</div>
+
+<div class="price" id="price">
+--
+</div>
+
+<div id="change">
+بانتظار البيانات
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="label">Bid</div>
+<div class="value" id="bid">--</div>
+</div>
+
+<div class="card">
+<div class="label">Ask</div>
+<div class="value" id="ask">--</div>
+</div>
+
+<div class="card">
+<div class="label">الفريم</div>
+<div class="value">5M</div>
+</div>
+
+<div class="card">
+<div class="label">الوضع</div>
+<div class="value">تجريبي</div>
+</div>
+
+</div>
+
+<div class="signal">
+
+<div>إشارة التحليل</div>
+
+<div id="signal" class="signal-value wait">
+WAIT
+</div>
+
+<div>
+قوة الإشارة:
+<strong id="strength">--</strong>
+</div>
+
+<div style="margin-top:15px">
+Entry:
+<strong id="entry">--</strong>
+</div>
+
+<div style="margin-top:10px">
+Stop Loss:
+<strong id="sl">--</strong>
+</div>
+
+<div style="margin-top:10px">
+Take Profit:
+<strong id="tp">--</strong>
+</div>
+
+</div>
+
+<button onclick="demoAnalysis()">
+🔄 تحليل الذهب
+</button>
+
+<div class="status" id="status">
+النظام جاهز — بانتظار ربط السعر الحقيقي
+</div>
+
+</div>
+
+<script>
+
+function demoAnalysis(){
+
+document.getElementById("status").textContent =
+"جاري تحليل XAUUSD...";
+
+setTimeout(function(){
+
+document.getElementById("signal").textContent =
+"WAIT";
+
+document.getElementById("strength").textContent =
+"--";
+
+document.getElementById("status").textContent =
+"النسخة التجريبية تعمل بنجاح";
+
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>
